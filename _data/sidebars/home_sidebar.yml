@@ -1,0 +1,22 @@
+# This is your sidebar TOC. The sidebar code loops through sections here and provides the appropriate formatting.
+
+entries:
+- title: Sidebar
+  levels: one
+  folders:
+  
+  - title: Documentation
+    output: web
+    folderitems:
+    - title: Format
+      url: /format.html
+      output: web
+    - title: Check
+      url: /check.html
+      output: web
+    - title: Export
+      url: /export.html
+      output: web
+    - title: Scope
+      url: /scope.html
+      output: web
