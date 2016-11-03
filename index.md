@@ -5,4 +5,15 @@ sidebar: mydoc_sidebar
 permalink: index.html
 ---
 
-Developer Kit for implementing Domain Specific Languages with [Xtext](http://www.eclipse.org/Xtext/).
+Developer Kit for implementing Domain Specific Languages (DSL) complements [Xtext](http://www.eclipse.org/Xtext/) 
+with four DSLs that standardize implementation of a DSL. 
+
+- [Format DSL](format.html)
+
+- Check DSL
+
+- Export DSL
+
+- Scope DSL
+
+The languages come with extensions of Xtext runtime supporting sophisticated cases in DSL design.

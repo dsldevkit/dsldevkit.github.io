@@ -8,7 +8,7 @@ topnav_title: DSL DevKit
 site_title: DSL DevKit
 # this appears in the html browser tab for the site title (seen mostly by search engines, not users)
 
-company_name:
+company_name: DSL DevKit
 # this appears in the footer
 
 github_editme_path:
@@ -30,10 +30,10 @@ exclude:
 
 feedback_subject_line: DSL DevKit
 
-feedback_email:
+# feedback_email: dsldevkit@gmail.com
 # used as a contact email for the Feedback link in the top navigation bar
 
-# feedback_disable: true
+feedback_disable: true
 # if you uncomment the previous line, the Feedback link gets removed
 
 # feedback_text: "Need help?"
@@ -66,7 +66,7 @@ defaults:
     values:
       layout: "page"
       comments: true
-      search: true
+      search: false
       sidebar: home_sidebar
   -
     scope:
@@ -75,7 +75,7 @@ defaults:
     values:
       layout: "page"
       comments: true
-      search: true
+      search: false
       tooltip: true
 
   -
@@ -85,7 +85,7 @@ defaults:
     values:
       layout: "post"
       comments: true
-      search: true
+      search: false
       sidebar: home_sidebar
 
 # these are defaults used for the frontmatter for these file types
@@ -101,4 +101,6 @@ description: "Developer Kit for implementing Domain Specific Languages with Xtex
 # the description is used in the feed.xml file
 
 # needed for sitemap.xml file only
-url: http://idratherbewriting.com
+url: http://dsldevkit.github.io
+
+repository: dsldevkit/dsldevkit.github.io
