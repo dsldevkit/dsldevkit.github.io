@@ -279,7 +279,7 @@ Grammar elements that can be used to express formatting directives are
 
 1. Keywords enclosed by `"`, e.g. `"begin"`
    
-   also applicable to wildcard rules, see AvqScript for an example
+   also applicable to wildcard rules
 
 2. Rule-calls
    
@@ -450,7 +450,7 @@ Example: non-fixed fixed (column alignment applied to the case-statement)
             else
               tab.descn
           end
- ```
+```
 
 The fixed keyword ensures that when the current content of the line exceeds the value required by the column, the column is not shifted to the position relative to the content of the line (current content of the line + single whitespace), but the line break occurs.
 

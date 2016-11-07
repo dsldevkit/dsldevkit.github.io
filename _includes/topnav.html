@@ -47,6 +47,12 @@
                 {% if site.feedback_disable == null or site.feedback_disable == false %}
 			{% include feedback.html %}
 		{% endif %}
+               {% if site.twitter_username %}
+                <li>
+                  <a href="https://twitter.com/{{ site.twitter_username }}" class="noCrossRef" target="_blank"><i class="fa fa-twitter"></i></a>
+                </li>
+                {% endif %}
+                {% if site.search_enabled %}
                 <!--comment out this block if you want to hide search-->
                 <li>
                     <!--start search-->
@@ -68,6 +74,7 @@
                     </script>
                     <!--end search-->
                 </li>
+                {% endif %}
             </ul>
         </div>
         </div>

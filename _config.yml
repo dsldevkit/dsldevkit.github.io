@@ -11,6 +11,8 @@ site_title: DSL DevKit
 company_name: DSL DevKit
 # this appears in the footer
 
+twitter_username: dsldevkit
+
 github_editme_path:
 # if you're using Github, provide the basepath to the branch you've created for reviews, following the sample here. if not, leave this value blank.
 
