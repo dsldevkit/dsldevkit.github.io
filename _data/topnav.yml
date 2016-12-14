@@ -5,13 +5,33 @@
 topnav_dropdowns:
 - title: Topnav dropdowns
   folders:
-    - title: Documentation
-      folderitems:
-        - title: Format
-          url: /format.html
-        - title: Check
-          url: /check.html
-        - title: Export
-          url: /export.html
-        - title: Scope
-          url: /scope.html
+  - title: Format
+    output: web
+    folderitems:
+    - title: Format language
+      url: /format.html
+      output: web
+    
+  - title: Check
+    output: web
+    folderitems:
+    - title: Check language
+      url: /check.html
+      output: web
+    - title: Check runtime
+      url: /check_runtime.html
+      output: web        
+
+  - title: Export
+    output: web
+    folderitems:
+    - title: Export language
+      url: /export.html
+      output: web
+
+  - title: Scope
+    output: web
+    folderitems:
+    - title: Scope language
+      url: /scope.html
+      output: web

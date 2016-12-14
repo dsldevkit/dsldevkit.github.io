@@ -1,11 +1,7 @@
-jekyll_platform: "Jekyll is a static site generator that builds sites using most modern web technologies."
+format: "A DSL to define formatter configuration for an Xtext formatter."
 
-fractious: "Like a little mischevious child, full of annoying and constant trouble."
+check: "A DSL to define model constraints for Ecore-based AST of a DSL implemented with Xtext."
 
-gratuitous: "Something that is unwarranted and uncouth, like the social equivalent of a flagrant foul."
+export: "A DSL to define externally visible objects of a DSL."
 
-haughty: "Proud and flaunting it. Holding your head high up like a snooty, too-good-for-everything rich person."
-
-impertinent: "Someone acting rude and insensitive to others."
-
-intrepid: "Brave and courageous especially in a difficult, dangerous situation."
+scope: "A DSL to define scope provider for a DSL."

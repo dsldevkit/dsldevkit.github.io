@@ -11,6 +11,8 @@ with four DSLs that standardize implementation of a DSL.
 - [Format DSL](format.html)
 
 - Check DSL
+  - [Language description](check.html)
+  - [Language runtime](check_runtime.html)
 
 - Export DSL
 
