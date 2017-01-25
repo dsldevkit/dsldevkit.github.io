@@ -5,6 +5,8 @@ sidebar: mydoc_sidebar
 permalink: index.html
 ---
 
+[![Build Status](https://travis-ci.org/dsldevkit/dsl-devkit.svg?branch=master)](https://travis-ci.org/dsldevkit/dsl-devkit)
+
 Developer Kit for implementing Domain Specific Languages (DSL) complements [Xtext](http://www.eclipse.org/Xtext/) 
 with four DSLs that standardize implementation of a DSL. 
 
