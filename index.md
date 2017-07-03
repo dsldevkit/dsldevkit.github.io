@@ -16,9 +16,11 @@ with four DSLs that standardize implementation of a DSL.
   - [Language description](check.html)
   - [Language runtime](check_runtime.html)
 
-- Export DSL
+- [Export DSL](export.html)
 
 - Scope DSL
+  - [Language description](scope.html)
+  - [Cross-referencing user guide](scope_guide.html)
 
 The languages come with extensions of Xtext runtime supporting sophisticated cases in DSL design.
 

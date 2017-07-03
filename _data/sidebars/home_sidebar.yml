@@ -35,4 +35,6 @@ entries:
     - title: Scope language
       url: /scope.html
       output: web
-
+    - title: Cross-referencing guide
+      url: /scope_guide.html
+      output: web
