@@ -219,7 +219,7 @@ Scope computation is a prerequisite for linking: the linker simply asks for all 
 
 ## References across resources
 
-So far none of the examples included cross-references to elements in other resources such as when a Java import statement or a static method invocation references a class in a different package by its fully qualified class name. But since the Java mechanism to locate classes is rather sophisticated and complex, we only consider how Avaloq sources are located within an ASMD context. We will not, however, describe the details of how sources — or more precisely: particular source versions — become part of a given context.
+So far none of the examples included cross-references to elements in other resources such as when a Java import statement or a static method invocation references a class in a different package by its fully qualified class name. 
 
 ### Global scope
 
