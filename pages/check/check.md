@@ -50,7 +50,7 @@ Whereas the meta-data is self-descriptive, the check constraint needs further at
 
 Example of a constraint validating maximal name length:
 
-```
+``` java
 for VariableDeclaration decl {
     if (decl.name.length > 30) {
          issue
