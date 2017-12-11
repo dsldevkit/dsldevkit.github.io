@@ -2,13 +2,13 @@
 output: web
 # this property is useful for conditional filtering of content that is separate from the PDF.
 
-topnav_title: DSL DevKit
+topnav_title: DSL Developer Kit
 # this appears on the top navigation bar next to the home button
 
-site_title: DSL DevKit
+site_title: DDK
 # this appears in the html browser tab for the site title (seen mostly by search engines, not users)
 
-company_name: DSL DevKit
+company_name: DSL Developer Kit
 # this appears in the footer
 
 twitter_username: dsldevkit
@@ -30,7 +30,7 @@ exclude:
   - .gitignore
 # these are the files and directories that jekyll will exclude from the build
 
-feedback_subject_line: DSL DevKit
+feedback_subject_line: DSL Developer Kit
 
 # feedback_email: dsldevkit@gmail.com
 # used as a contact email for the Feedback link in the top navigation bar
