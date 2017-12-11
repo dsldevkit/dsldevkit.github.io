@@ -1,6 +1,6 @@
 ---
-title: DSL DevKit
-keywords: DSL Dev Kit
+title: DSL Developer Kit
+keywords: DSL DevKit Xtext
 sidebar: mydoc_sidebar
 permalink: index.html
 ---
@@ -24,4 +24,8 @@ The languages come with extensions of Xtext runtime supporting sophisticated cas
 
 **Source Code**
 
-[Source code of DSL DevKit](https://github.com/dsldevkit/dsl-devkit)
+[Source code on GitHub](https://github.com/dsldevkit/dsl-devkit)
+
+```sh
+$ git clone https://github.com/dsldevkit/dsl-devkit
+```
