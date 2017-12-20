@@ -103,6 +103,6 @@ description: "Developer Kit for implementing Domain Specific Languages with Xtex
 # the description is used in the feed.xml file
 
 # needed for sitemap.xml file only
-url: http://dsldevkit.github.io
+url: http://ddk.tools.avaloq.com
 
 repository: dsldevkit/dsldevkit.github.io

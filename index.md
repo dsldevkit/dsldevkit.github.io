@@ -3,12 +3,14 @@ title: DSL Developer Kit
 keywords: DSL DevKit Xtext
 sidebar: mydoc_sidebar
 permalink: index.html
+twitter: true
+toc: false
 ---
 
 [![Build Status](https://travis-ci.org/dsldevkit/dsl-devkit.svg?branch=master)](https://travis-ci.org/dsldevkit/dsl-devkit)
 
-Developer Kit for implementing Domain Specific Languages (DSL) complements [Xtext](http://www.eclipse.org/Xtext/) 
-with four DSLs that standardize implementation of a DSL. 
+Developer Kit for implementing Domain Specific Languages (DSL) complements [Xtext](http://www.eclipse.org/Xtext/)
+with four DSLs that standardize implementation of a DSL.
 
 - [Format DSL](format.html)
 
@@ -22,7 +24,7 @@ with four DSLs that standardize implementation of a DSL.
 
 The languages come with extensions of Xtext runtime supporting sophisticated cases in DSL design.
 
-**Source Code**
+## Source Code
 
 [Source code on GitHub](https://github.com/dsldevkit/dsl-devkit)
 

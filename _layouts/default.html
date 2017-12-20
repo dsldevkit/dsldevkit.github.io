@@ -64,10 +64,21 @@
         <div class="col-md-3">
 
           {% include sidebar.html %}
+{% if page.twitter == true %}
+    <!-- Content Column -->
+    <div class="col-md-6">
+        {{content}}
+    </div>
+    <!-- Twitter Column -->
+    <div class="col-md-3">
+        {% include twitter.html %}
+    </div>
+{% else %}
     <!-- Content Column -->
     <div class="col-md-9">
         {{content}}
     </div>
+{% endif %}
     <!-- /.row -->
 </div>
 <!-- /.container -->
