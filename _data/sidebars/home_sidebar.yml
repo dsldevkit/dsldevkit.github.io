@@ -4,37 +4,41 @@ entries:
 - title: Sidebar
   levels: two
   folders:
-  
+
   - title: Format
     output: web
+    url: /format.html
     folderitems:
-    - title: Format language
+    - title: Format Language
       url: /format.html
       output: web
-    
+
   - title: Check
     output: web
+    url: /check.html
     folderitems:
-    - title: Check language
+    - title: Check Language
       url: /check.html
       output: web
-    - title: Check runtime
+    - title: Check Runtime
       url: /check_runtime.html
-      output: web        
+      output: web
 
   - title: Export
     output: web
+    url: /export.html
     folderitems:
-    - title: Export language
+    - title: Export Language
       url: /export.html
       output: web
 
   - title: Scope
     output: web
+    url: /scope.html
     folderitems:
-    - title: Scope language
+    - title: Scope Language
       url: /scope.html
       output: web
-    - title: Cross-referencing guide
+    - title: Cross-referencing Guide
       url: /scope_guide.html
       output: web

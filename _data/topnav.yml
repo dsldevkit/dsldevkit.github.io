@@ -1,40 +1,7 @@
 ## Topnav single links
 ## if you want to list an external url, use external_url instead of url. the theme will apply a different link base.
-
-#Topnav dropdowns
-topnav_dropdowns:
-- title: Topnav dropdowns
-  folders:
-  - title: Format
-    output: web
-    folderitems:
-    - title: Format language
-      url: /format.html
-      output: web
-    
-  - title: Check
-    output: web
-    folderitems:
-    - title: Check language
-      url: /check.html
-      output: web
-    - title: Check runtime
-      url: /check_runtime.html
-      output: web        
-
-  - title: Export
-    output: web
-    folderitems:
-    - title: Export language
-      url: /export.html
-      output: web
-
-  - title: Scope
-    output: web
-    folderitems:
-    - title: Scope language
-      url: /scope.html
-      output: web
-    - title: Cross-referencing guide
-      url: /scope_guide.html
-      output: web
+topnav:
+- title: Topnav
+  items:
+    - title: GitHub
+      external_url: https://github.com/dsldevkit/dsl-devkit
