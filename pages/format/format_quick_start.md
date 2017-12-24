@@ -3,6 +3,7 @@ title: Format Quick-start Guide
 keywords: Format
 sidebar: mydoc_sidebar
 permalink: format_quick_start.html
+folder: format
 ---
 
 ## Formatter definition

@@ -3,6 +3,7 @@ title: Check Language Runtime
 keywords: Check Runtime
 sidebar: mydoc_sidebar
 permalink: check_runtime.html
+folder: check
 ---
 
 Check runtime allowed dynamic loading of check projects.

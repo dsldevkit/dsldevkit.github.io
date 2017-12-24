@@ -3,6 +3,7 @@ title: Format Language Guide
 keywords: Format
 sidebar: mydoc_sidebar
 permalink: format_guide.html
+folder: format
 ---
 
 Structure of a Format source:

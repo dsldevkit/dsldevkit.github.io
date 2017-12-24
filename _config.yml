@@ -13,7 +13,7 @@ company_name: DSL Developer Kit
 
 twitter_username: dsldevkit
 
-github_editme_path:
+github_editme_path: dsldevkit/dsldevkit.github.io/blob/master
 # if you're using Github, provide the basepath to the branch you've created for reviews, following the sample here. if not, leave this value blank.
 
 disqus_shortname:

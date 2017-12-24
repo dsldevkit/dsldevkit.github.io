@@ -3,7 +3,9 @@ title: Format Language
 keywords: Format
 sidebar: mydoc_sidebar
 permalink: format.html
+folder: format
 ---
+
 ## Introduction
 The Format DSL is intended to be used when creating a format configuration.
 It is basically a frontend to Xtext's declarative formatter framework.

@@ -3,6 +3,7 @@ title: Check Language
 keywords: Check
 sidebar: mydoc_sidebar
 permalink: check.html
+folder: check
 ---
 
 The Check DSL is used to specify model constraints.

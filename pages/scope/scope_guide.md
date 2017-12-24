@@ -3,6 +3,7 @@ title: Cross-Referencing User Guide
 keywords: scoping, linking
 sidebar: mydoc_sidebar
 permalink: scope_guide.html
+folder: scope
 ---
 
 Cross-Referencing is the overarching task of making cross-references work. It consists of writing

@@ -3,6 +3,7 @@ title: DSL Developer Kit Introduction
 keywords: DDK concepts
 sidebar: mydoc_sidebar
 permalink: overview.html
+folder: overview
 ---
 
 ## DSL Implementations with DSLs

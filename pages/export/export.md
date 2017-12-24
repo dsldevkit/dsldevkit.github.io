@@ -3,9 +3,10 @@ title: Export Language
 keywords: export
 sidebar: mydoc_sidebar
 permalink: export.html
+folder: export
 ---
 
-The export language defines which objects are exported from a certain resource and thus made available to link against from other resources. Which objects are imported by a resource, on the other hand, is defined indirectly by means of scoping rules in the scope language. By matching up exported against imported objects the Xtext builder is able to compute the dependencies and thus determine which resources have to be rebuilt if one particular resource (or set of resources) has changed. To determine if a resource has changed the builder again uses the exported objects: It compares the exported objects as they were before the change with what they are after the change. 
+The export language defines which objects are exported from a certain resource and thus made available to link against from other resources. Which objects are imported by a resource, on the other hand, is defined indirectly by means of scoping rules in the scope language. By matching up exported against imported objects the Xtext builder is able to compute the dependencies and thus determine which resources have to be rebuilt if one particular resource (or set of resources) has changed. To determine if a resource has changed the builder again uses the exported objects: It compares the exported objects as they were before the change with what they are after the change.
 
 There are two main reasons to export an object description for an object
 
@@ -23,9 +24,9 @@ The set of all IResourceDescription objects is what we refer to as the Xtext ind
 
 As already pointed out the Xtext builder manages the Xtext index. By building resources it creates the IResourceDescription objects (as defined by the export file for the respective language) and then adds them to the index. But it also rebuilds other resources depending on a built resource. Naturally it should only rebuild depending resources if there was an actual change to the built resource. To be more precise: Only if the change represents a semantic change relevant to depending resources. This is again where the exported objects come in. By structurally comparing the set of exported objects before and after the change the builder is able to determine if dependent resources need rebuilding. It is therefore very important that the exported objects capture all the required information to perform this comparison.
 
-So basically, a resource should export any object that can be accessed form another resource. Along with it all relevant semantic information about it. 
+So basically, a resource should export any object that can be accessed form another resource. Along with it all relevant semantic information about it.
 
-Sometimes it may make sense to export more information than necessary for linking or invalidation. Further use-cases include discovery of contributions (i.e. partial classes in C#) or can be used beyond linking i.e. to keep track of contributions to generated objects as long as no dedicated mechanism available. 
+Sometimes it may make sense to export more information than necessary for linking or invalidation. Further use-cases include discovery of contributions (i.e. partial classes in C#) or can be used beyond linking i.e. to keep track of contributions to generated objects as long as no dedicated mechanism available.
 
 At the same time we have to make sure we don't export too many exported objects. It may for instance not make sense to export the parameters of a Java procedure as separate objects as the parameters can never be referenced on their own; i.e. without also having an explicit reference to the procedure. Note that procedure is also never referenced without a reference to the package, but is still exported to suport fine grain invaldiation.
 
@@ -185,7 +186,7 @@ So we start with the keyword export followed by the name of the type of the obje
 
 ### Object names
 
-As we have seen every exported object has a name. By default the name of every exported object is qualified. So if we for example have an package *util* in our scripting language with a function *bool_to_char* then the name of the function inside the index will be *util.bool_to_char*. The reason is that we would like to have names which are more or less unique. 
+As we have seen every exported object has a name. By default the name of every exported object is qualified. So if we for example have an package *util* in our scripting language with a function *bool_to_char* then the name of the function inside the index will be *util.bool_to_char*. The reason is that we would like to have names which are more or less unique.
 
 So by default the name of every exported object is prefixed by that of its nearest exported container object. If there is no nearest exported container object the name is not prefixed. Sometimes we may want to suppress the automatic prefixing. We can do this by using the qualified keyword as in the following example:
 
