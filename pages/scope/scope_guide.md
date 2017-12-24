@@ -37,25 +37,25 @@ Purposes of this user guide
 
 Together, all the rules define the parse tree. There are four types of rules that each focus on a different aspect of the syntax:
 
-*Terminal Rules* — define the sequence of characters that make up a certain token; technically a token is a string as produced by the lexer, e.g. the rule for the keyword import or the rule for whitespace: 
+*Terminal Rules* — define the sequence of characters that make up a certain token; technically a token is a string as produced by the lexer, e.g. the rule for the keyword import or the rule for whitespace:
 
 ```
 terminal WS : (' '|'\t'|'\r'|'\n')+;
 ```
 
-*Data Type Rules* — reference terminal rules and data type rules to define a single or a sequence of tokens which gets mapped to an instance of an EDataType, e.g. EInt or an EString like this one: 
+*Data Type Rules* — reference terminal rules and data type rules to define a single or a sequence of tokens which gets mapped to an instance of an EDataType, e.g. EInt or an EString like this one:
 
 ```
 QualifiedName returns ecore::EString : ID ('.' ID)*;
 ```
 
-*Enum Rules* — define how single keyword tokens get mapped to an enumeration literal in the AST; enum rules are thus like specialized data type rules (since EEnum is a subtype of EDataType), e.g. 
+*Enum Rules* — define how single keyword tokens get mapped to an enumeration literal in the AST; enum rules are thus like specialized data type rules (since EEnum is a subtype of EDataType), e.g.
 
 ```
 enum VisibilityKind : PUBLIC = 'public' | PROTECTED = 'protected' | PRIVATE = 'private';
 ```
 
-*Parser Rules* — reference rules of all types to define how sequences of tokens map to objects (actually EObjects) and their structural features in the AST; technically it defines a subtree of the parse tree 
+*Parser Rules* — reference rules of all types to define how sequences of tokens map to objects (actually EObjects) and their structural features in the AST; technically it defines a subtree of the parse tree
 
 ```
 Type : 'type' name=ID ('extends' supertype=TypeRef)? '{' (declarations+=Declaration)* '}';
@@ -134,7 +134,7 @@ The logic for exactly how a proxy for a cross-reference resolves to the correct 
 The following fragment of Java code
 
 ```
-{ 
+{
   String a = "x";
   String b = a;
 }
@@ -154,7 +154,7 @@ Parsing and linking of the Java fragment would result in the following AST (soli
 {% include image.html file="scope/java_example.png" alt="Illustration for java code fragment with cross references" caption="Cross-refernce illustration" %}
 
 
-DSL DevKit uses a lazy linker that defers most of the work to later:
+DSL Developer Kit uses a lazy linker that defers most of the work to later:
 
 - in a first phase the linker traverses the entire AST of a resource and installs an unresolved proxy object as the target of each cross-reference. The URI of these proxies is a special kind of URI that (a) marks the proxies as unresolved Xtext cross-references, and (b) contains enough information to perform the actual linking at a later point in time.
 
@@ -219,7 +219,7 @@ Scope computation is a prerequisite for linking: the linker simply asks for all 
 
 ## References across resources
 
-So far none of the examples included cross-references to elements in other resources such as when a Java import statement or a static method invocation references a class in a different package by its fully qualified class name. 
+So far none of the examples included cross-references to elements in other resources such as when a Java import statement or a static method invocation references a class in a different package by its fully qualified class name.
 
 ### Global scope
 
@@ -346,7 +346,7 @@ Whenever an object needs to be referenced via a name under which it was not expo
 
 scopeEntity#entityReference {
 
-  context ScopeElement = find(mydsl::Entity) 
+  context ScopeElement = find(mydsl::Entity)
                          caseinsensitive as factory getUserIdFunction();
 
 }
@@ -371,7 +371,7 @@ private static final INameFunction USER_ID_FUNCTION = new INameFunction() {
     }
     return null;
   }
- 
+
   public QualifiedName apply(final IEObjectDescription from) {
 
     return QualifiedNames.safeQualifiedName(from.getUserData(EntityResourceDescriptionConstants.ENTITY__USER_ID));

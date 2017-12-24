@@ -37,7 +37,7 @@ As shown in the Xtext reference manual, scopes may also be nested (aka chained) 
 
 Standard Xtext distinguishes between local and global scopes and scope providers; a concept that matches well the semantics of most programming languages where a cross reference can refer to an object declared in the same resource (i.e. provided by the local scope provider) or an object declared in another resource (provided by the global scope provider). Clients (e.g. the linker) would interact with the local scope provider which would return a scope chain where the scope computed by the global scope would be chained as an outer scope to its own calculated scope. And because of the transparency of scope chaining (see previous bullet) the client would automatically find local elements first, when available. The global scope provider would typically use the Xtext index to compute the outer global scope.
 
-The Scope DSL (and its runtime library) does not have this distinction, because it can be too restrictive. Some of the languages implemented DSL DevKit can have scoping semantics where an identifier must be linked against an object from the global scope (available in the index) even if an object with the same name is available in the local scope. The Scope DSL therefore does not impose any restrictions on the order of scope chains with local elements and global elements. Having an inner scope that queries the global index, followed by an outer scope that actually is a local scope is perfectly fine, although rather unusual.
+The Scope DSL (and its runtime library) does not have this distinction, because it can be too restrictive. Some of the languages implemented DSL Developer Kit can have scoping semantics where an identifier must be linked against an object from the global scope (available in the index) even if an object with the same name is available in the local scope. The Scope DSL therefore does not impose any restrictions on the order of scope chains with local elements and global elements. Having an inner scope that queries the global index, followed by an outer scope that actually is a local scope is perfectly fine, although rather unusual.
 
 ### Context object
 
@@ -77,11 +77,11 @@ For instance:
 scoping com.avaloq.tools.dsl.mydsl.MyDsl
 
 import "http://www.avaloq.com/tools/dsl/mydsl"
- 
+
 
 extension com::avaloq::tools::dsl::mydsl::MyDslScoping
 
- 
+
 case insensitive naming {
 
   Entity = name;
@@ -93,7 +93,7 @@ scope EntityReference#entity {
   context * = find(mydsl::Entity) as export;
 
 }
-``` 
+```
 
 ### Header
 
@@ -125,7 +125,7 @@ import "http://www.avaloq.com/tools/dsl/mydsl"
 
 Optionally, as with the second import, we can also specify an alias for the imported model. By default, the alias is the name of the imported EPackage.
 
-Aliases are sometimes necessary to disambiguate a type reference, as two imported EPackages may both define a type with the same name. 
+Aliases are sometimes necessary to disambiguate a type reference, as two imported EPackages may both define a type with the same name.
 
 ### Extensions
 
@@ -135,7 +135,7 @@ The DSL supports defining scopes using Xtend expressions. To support modularizat
 extension com::avaloq::tools::dsl::mydsl::MyDslScoping        // native helper operations
 ```
 
-In order to be found, the extension must be on the classpath. 
+In order to be found, the extension must be on the classpath.
 
 ### Default namings
 
@@ -163,7 +163,7 @@ There are three types of naming expressions:
 
 1. Normal Xtend expressions, with this referring to the scoped element which will be of the type specified. Such expressions may use operations defined in Xtend extensions. The expression can also be a constant string.
 
-2. Factory expressions. These have the format factory functionCall(), where functionCall is a function declared in an Xtend extension file as a Java method. The function call is actually again an Xtend expression, with this referring to an object of the type for which the naming is defined. The function may also have additional parameters. The called function is supposed to return a NameFunction. 
+2. Factory expressions. These have the format factory functionCall(), where functionCall is a function declared in an Xtend extension file as a Java method. The function call is actually again an Xtend expression, with this referring to an object of the type for which the naming is defined. The function may also have additional parameters. The called function is supposed to return a NameFunction.
 A NameFunction is the runtime representation of a naming expression. It has two methods, both named apply, one which is passed in an EObject (i.e., a model object), and a second one which takes an IEObjectDecsription as a parameter (i.e., an index entry). The default implementation for the index-entry just gets the indexed object or proxy and then invokes the apply method on that EObject. In some cases, factory methods may be useful to avoid loading resources too early by overriding the apply for the index entry to work directly with the information available in the index.
 
 3. Additionally it is also possible to specify the keyword export as a naming expression. This then corresponds to the name the object was exported as in the index. (warning) Note that the export naming expression currently is valid for IEObjectDescriptions (not EObjects!) only. It thus applies to elements obtained from the global index and it is the preferred naming expression to use as index lookups can then be optimized.

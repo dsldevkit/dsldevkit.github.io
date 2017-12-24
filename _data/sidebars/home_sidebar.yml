@@ -5,40 +5,73 @@ entries:
   levels: two
   folders:
 
-  - title: Format
+  - title: DSL Developer Kit
+    output: web
+    url: /index.html
+    folderitems:
+    - title: Home
+      url: /index.html
+      output: web
+    - title: Introduction
+      url: /overview.html
+      output: web
+
+  - title: Format DSL
     output: web
     url: /format.html
     folderitems:
-    - title: Format Language
+    - title: Concepts
       url: /format.html
       output: web
+    - title: Quick start
+      url: /format_quick_start.html
+      output: web
+    - title: Guide
+      url: /format_guide.html
+      output: web
 
-  - title: Check
+  - title: Check DSL
     output: web
     url: /check.html
     folderitems:
-    - title: Check Language
+    - title: Concepts
       url: /check.html
       output: web
-    - title: Check Runtime
+    - title: Runtime
       url: /check_runtime.html
       output: web
 
-  - title: Export
+  - title: Export DSL
     output: web
     url: /export.html
     folderitems:
-    - title: Export Language
+    - title: Concepts
       url: /export.html
       output: web
 
-  - title: Scope
+  - title: Scope DSL
     output: web
     url: /scope.html
     folderitems:
-    - title: Scope Language
+    - title: Concepts
       url: /scope.html
       output: web
-    - title: Cross-referencing Guide
+    - title: Cross-referencing guide
       url: /scope_guide.html
       output: web
+
+#  - title: Builder
+#    output: web
+#    url: /builder.html
+#    folderitems:
+#    - title: Concepts
+#      url: /builder.html
+#      output: web
+
+#  - title: Test Framework
+#    output: web
+#    url: /test.html
+#    folderitems:
+#    - title: Test Concepts
+#      url: /test.html
+#      output: web

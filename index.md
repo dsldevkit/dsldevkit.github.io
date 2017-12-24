@@ -1,6 +1,6 @@
 ---
 title: DSL Developer Kit
-keywords: DSL DevKit Xtext
+keywords: DSL, Developer Kit, DDK, Xtext, Domain Specific Language
 sidebar: mydoc_sidebar
 permalink: index.html
 twitter: true
@@ -24,6 +24,8 @@ with four DSLs that standardize implementation of a DSL.
 
 The languages come with extensions of Xtext runtime supporting sophisticated cases in DSL design.
 
+Read [DSL Developer Kit Introduction] for a quick overview.
+
 ## Source Code
 
 [Source code on GitHub](https://github.com/dsldevkit/dsl-devkit)
@@ -31,3 +33,4 @@ The languages come with extensions of Xtext runtime supporting sophisticated cas
 ```sh
 $ git clone https://github.com/dsldevkit/dsl-devkit
 ```
+[DSL Developer Kit Introduction]: /overview.html
