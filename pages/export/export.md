@@ -206,9 +206,11 @@ A constructor will be exported under the same name as the class. This makes sens
 
 Using a guard we can specify a condition under which an object is to be exported. In the following example we specify that a MethodDeclaration is only to be exported if it's a top-level declaration and it isn't private. I.e. we don't want to export nested or private procedures, which are not accessible to the outside world.
 
+```
 export MethodDeclaration as name [this.isTopLevel() && !this.isPrivate()] {
 
 }
+```
 
 ### User data
 
@@ -228,8 +230,8 @@ As a result the exported object will now have two user data entries with name ``
 
 As the above example showed user data entries which don't correspond to an ```EAttribute``` of the object to be exported can be computed using ```data``` entry. We must thus also specify the name of the user data entry (the identifier following the data keyword) and as its value we can specify an arbitrary Xtend expression (where the object to be exported is bound to the implicit ```this``` variable).
 
-User data entries as well as fields are skipped if the value is null.
+User data entries as well as fields are skipped if the value is ```null```.
 
 Computations made to export objects should generally not depend on external references.
 
-It is not allowed to use index to resolve references to external objects during the indexing. An attempt to do so will be reported by the builder framework. So if it is the case that multiple files are required to compuite object description or the object being exported is itself derived from multiple objects, the other files have to be loaded manually via the file system and appropriate references for invalidation must be registered (See com.avaloq.tools.ddk.xtext.scoping.ImplicitReferencesAdapter). In the latter case we typically talk about "include" and not "refer" as with header files in C++. It is a precondition that file names are known without having to involve the Xtext index.
+It is not allowed to use index to resolve references to external objects during the indexing. An attempt to do so will be reported by the builder framework. So if it is the case that multiple files are required to compuite object description or the object being exported is itself derived from multiple objects, the other files have to be loaded manually via the file system and appropriate references for invalidation must be registered (See [com.avaloq.tools.ddk.xtext.scoping.ImplicitReferencesAdapter](https://github.com/dsldevkit/dsl-devkit/blob/master/com.avaloq.tools.ddk.xtext/src/com/avaloq/tools/ddk/xtext/scoping/ImplicitReferencesAdapter.java)). In the latter case we typically talk about "include" and not "refer" as with header files in C++. It is a precondition that file names are known without having to involve the Xtext index.
