@@ -67,7 +67,7 @@ exists (i.e. header declared as formatter for `Xyz` with `BaseXyz`).
 ## Rule
 
 A Rule consists of locators which are applied to one or more grammar elements in a fashion - a
-formatting directive is expressed with such a coupling, i.e. for element do what where.
+formatting directive is expressed with such a coupling, i.e. for *element* do *what where*.
 
 
 ```
@@ -80,7 +80,7 @@ In the example above the grammar element is the keyword `"begin"`.
 Locators are `increment` and `linewrap`. Locators are to be applied *after* the element `"begin"`.
 
 In case of Format reuse, a rule declared in extending source must be marked with the keyword
-override if there is a rule in any reused source applying to the same Xtext GrammarElements.
+`override` if there is a rule in any reused source applying to the same Xtext `GrammarElements`.
 
 Example:
 
@@ -240,9 +240,9 @@ In all the following syntax descriptions, the keyword ident means that the const
 To understand the meaning of the following keywords: `fixed`, `relative`, `nobreak` see the examples below.
 All three keywords can be combined in the same column alignment rule.
 
-Notice that only the keyword before is allowed. This means that the column alignment is applied to the current element (it refers to the grammar element for which it is defined). Contradictory, the keyword after applies to the next grammar element. Due to technical reasons - presence of opening and closing markers indicating the grammar element - the keyword after is disallowed, as it requires searching for the end of the next element (in the parse tree), when the current element is being considered, which makes the code overcomplicated and much less efficient. In return however, a user cannot benefit from any extra formatting feature. In other words: instead of using the column after formatting simply define the column before formatting for the subsequent element from the grammar.
+Notice that only the keyword `before` is allowed. This means that the column alignment is applied to the current element (it refers to the grammar element for which it is defined). Contradictory, the keyword `after` applies to the next grammar element. Due to technical reasons - presence of opening and closing markers indicating the grammar element - the keyword `after` is disallowed, as it requires searching for the end of the next element (in the parse tree), when the current element is being considered, which makes the code overcomplicated and much less efficient. In return however, a user cannot benefit from any extra formatting feature. In other words: instead of using the `column after` formatting simply define the `column before` formatting for the subsequent element from the grammar.
 
-Example: default column alignment (column alignment applied to the case-statement)
+Example: default column alignment (column alignment applied to the *case-statement*)
 
 ```
 //column 30 before;         
@@ -255,7 +255,7 @@ Example: default column alignment (column alignment applied to the case-statemen
                               end
 ```
 
-Example: non-fixed fixed (column alignment applied to the case-statement)
+Example: non-fixed fixed (column alignment applied to the *case-statement*)
 
 ```
 //column 10 before;         
