@@ -24,13 +24,15 @@ generated once, i.e. never overwritten, and the latter is always regenerated.
 In `MyDslFormatter` one can declare parts of the format configuration which cannot be expressed
 in Format DSL (using instructions provided by Xtext formatting framework).
 
+When generated for the first time, `MyDslFormatter` may be incorrect. Watch out for missing implementations for abstract methods.
+
 1. Format runtime
 
    The declared formatting configuration is applied between semantic tokens, i.e. a formatter
    inserts/removes/modifies white space between tokens. The Format DSL runtime extends the
    limited locator vocabulary of Xtext and and has an improved method to combine multiple
    locators for a grammar element. The Format DSL runtime component `DdkFormattingConfigBasedStream`
-   combines locators by category, so a no_space locator will not affect a linewrap locator.
+   combines locators by category, so a `no_space` locator will not affect a `linewrap` locator.
 
 2. DDK / Variable space locators
 
